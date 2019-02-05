@@ -1,0 +1,37 @@
+header,section,footer{           /* this is the creation of the grid to make the first hearder half the screen and the section and footer the whole screen*/
+    border: 1px solid blue;
+}
+
+
+.container{
+    display: grid;
+    grid-template-areas:
+    'header none'
+    'content content'
+    'footer footer';
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 12px;
+    text-align: center;
+
+
+
+}
+
+header{
+    grid-area: header;
+}
+
+section{
+    grid-area: content;
+}
+
+footer{                      /*the footer only occupies have the screen the other half is blank*/
+    grid-area: footer;
+    text-align: left ;
+    padding-left: 23%;
+
+}
+
+none{
+    grid-area: none;
+}
